@@ -557,7 +557,7 @@ ngx_http_footer_if_header_filter(ngx_http_request_t *r)
 
     if (conditions[i].lengths) {
         if (ngx_http_script_run(r, &footer, conditions[i].lengths->elts, 0, 
-                                conditions->values->elts)
+                                conditions[i].values->elts)
             == NULL)
         {
             return NGX_ERROR;
