@@ -531,7 +531,6 @@ ngx_http_footer_if_header_filter(ngx_http_request_t *r)
             && r->headers_out.status != NGX_HTTP_MOVED_PERMANENTLY
             && r->headers_out.status != NGX_HTTP_MOVED_TEMPORARILY
             && r->headers_out.status != NGX_HTTP_SEE_OTHER
-            && r->headers_out.status != NGX_HTTP_NOT_MODIFIED
             && r->headers_out.status != NGX_HTTP_TEMPORARY_REDIRECT)
         || flcf->conditions == NULL)
     {
