@@ -9,7 +9,7 @@ The `ngx_http_footer_if_filter_module` is used to add given content to the end o
 ```nginx
 
     location / {
-        footer_if ($request_method == 'FOO') $arg_foo;
+        footer_if ($request_method = 'FOO') $arg_foo;
         root html;
     }
 ```
